@@ -29,6 +29,19 @@ main {
   margin-bottom: 20px;
 }
 
+.m-1 {
+  margin: 5px;
+}
+
+.m-5 {
+  margin: 20px;
+}
+
+.center-content {
+  display: flex;
+  justify-content: center;
+}
+
 .pointer {
   cursor: pointer;
 }
