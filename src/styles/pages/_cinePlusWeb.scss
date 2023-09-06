@@ -1,0 +1,32 @@
+.seat-box {
+  width: 60px;
+  height: 60px;
+  border-radius: 5px;
+}
+
+.seat-available {
+  border: 2px solid green;
+  color: green;
+}
+
+.seat-reserved {
+  border: 2px solid red;
+  color: red;
+}
+
+.seat-number {
+  height: 40px;
+  font-size: 20px;
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.seat-price {
+  height: 20px;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
