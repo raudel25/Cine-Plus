@@ -5,12 +5,15 @@ import User from "../pages/home/User";
 import CinePlusWeb from "../pages/cine-plus/CinePlusWeb";
 import { Layout } from "antd";
 import { Content, Footer, Header } from "antd/es/layout/layout";
-import Link from "antd/es/typography/Link";
+import MyFooter from "../layout/Footer";
+import MyHeader from "../layout/Header";
 
 export const WebRouter = () => {
   return (
     <Layout className="layout">
-      <Header></Header>
+      <Header>
+        <MyHeader user={null} home={true} />
+      </Header>
       <Content>
         <Routes>
           <Route path="/admin" element={<Admin />}></Route>
@@ -19,9 +22,8 @@ export const WebRouter = () => {
           <Route path="*" element={<CinePlusWeb />}></Route>
         </Routes>
       </Content>
-      <Footer className="layout-footer">
-        Cine Plus ©2023 Created by{" "}
-        <Link href="https://github.com/raudel25">raudel25</Link>
+      <Footer>
+        <MyFooter />
       </Footer>
     </Layout>
   );
