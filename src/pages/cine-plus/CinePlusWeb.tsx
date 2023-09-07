@@ -1,4 +1,3 @@
-import Seat from "./Seat";
 import ShowMovieShop from "./ShowMovieShop";
 
 const CinePlusWeb = () => {

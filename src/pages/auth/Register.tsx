@@ -3,7 +3,7 @@ import {
   LockOutlined,
   EyeInvisibleOutlined,
 } from "@ant-design/icons";
-import { Form, Input, Button, Typography } from "antd";
+import { Form, Input, Button, Typography, Row, Col, Image } from "antd";
 
 const Register = () => {
   const validatePassword = () => {
@@ -12,11 +12,24 @@ const Register = () => {
 
   return (
     <div className="auth-box">
-      <div className="center-content mt-5 mb-5">
-        <Typography>
-          <Typography.Title>Cine Plus</Typography.Title>
-        </Typography>
-      </div>
+      <Row style={{ width: "100%" }}>
+        <Col span={4}>
+          <Image
+            className="m-1"
+            width={"60px"}
+            height={"60px"}
+            src={"/assets/movie.png"}
+          />
+        </Col>
+        <Col span={16}>
+          <div className="center-content mt-5 mb-5">
+            <Typography>
+              <Typography.Title>Cine Plus</Typography.Title>
+            </Typography>
+          </div>
+        </Col>
+        <Col span={4}></Col>
+      </Row>
 
       <Form className="m-5">
         <Form.Item
