@@ -1,15 +1,13 @@
 import Seat from "./Seat";
+import ShowMovieShop from "./ShowMovieShop";
 
 const CinePlusWeb = () => {
-  return (
-    <Seat
-      seat={{ number: 1, price: 200.01, showMovieId: 1, available: false }}
-      toolTip={"aaa"}
-      onClick={(i: number) => {
-        i++;
-      }}
-    />
-  );
+  const seats = [];
+
+  for (let i = 0; i < 100; i++) {
+    seats.push({ number: i, price: 200.01, showMovieId: 1, available: true });
+  }
+  return <ShowMovieShop seats={seats} open={true} />;
 };
 
 export default CinePlusWeb;

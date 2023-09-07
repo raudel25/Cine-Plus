@@ -3,11 +3,13 @@ import { SeatType } from "../../types/types";
 import { DollarCircleOutlined } from "@ant-design/icons";
 import { Tooltip } from "antd";
 
-const Seat: FC<{
+export interface SeatProps {
   seat: SeatType;
   onClick: (showMovieId: number) => void;
   toolTip: string;
-}> = ({ seat, onClick, toolTip }) => {
+}
+
+const Seat: FC<SeatProps> = ({ seat, onClick, toolTip }) => {
   return (
     <Tooltip title={toolTip}>
       <div
