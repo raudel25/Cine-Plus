@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import Admin from "../pages/home/Admin";
 import Ticket from "../pages/home/Ticket";
 import User from "../pages/home/User";
@@ -11,7 +11,7 @@ import MyHeader from "../layout/Header";
 export const WebRouter = () => {
   return (
     <Layout className="layout">
-      <Header>
+      <Header className="layout-header">
         <MyHeader user={null} home={true} />
       </Header>
       <Content>
@@ -19,7 +19,8 @@ export const WebRouter = () => {
           <Route path="/admin" element={<Admin />}></Route>
           <Route path="/ticket" element={<Ticket />}></Route>
           <Route path="/user" element={<User />}></Route>
-          <Route path="*" element={<CinePlusWeb />}></Route>
+          <Route path="/web" element={<CinePlusWeb />}></Route>
+          <Route path="*" element={<Navigate to="/web" />}></Route>
         </Routes>
       </Content>
       <Footer>

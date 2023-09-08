@@ -9,26 +9,24 @@ export interface MyHeaderProps {
 
 const MyHeader: FC<MyHeaderProps> = ({ user, home }) => {
   return (
-    <div className="layout-header">
-      <Row justify="space-between">
-        <Col>
-          <Image width={"40px"} height={"40px"} src={"/assets/movie.png"} />
-          <span className="layout-header-title">{home ? "Web" : "Home"}</span>
-        </Col>
+    <Row justify="space-between">
+      <Col>
+        <Image width={"40px"} height={"40px"} src={"/assets/movie.png"} />
+        <span className="layout-header-title">{home ? "Web" : "Home"}</span>
+      </Col>
 
-        <Col>
-          {user ? (
-            <span>
-              {user} <LogoutOutlined />
-            </span>
-          ) : (
-            <span>
-              Login <LoginOutlined />
-            </span>
-          )}
-        </Col>
-      </Row>
-    </div>
+      <Col>
+        {user ? (
+          <span>
+            {user} <LogoutOutlined />
+          </span>
+        ) : (
+          <span>
+            Login <LoginOutlined />
+          </span>
+        )}
+      </Col>
+    </Row>
   );
 };
 
